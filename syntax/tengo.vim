@@ -43,8 +43,16 @@ hi def link     funcDecl            Type
 " Floating point
 syn match       floatLit            "\<\d\+\.\d*\([Ee][-+]\d\+\)\?\>"
 syn match       floatLit            "\<\.\d\+\([Ee][-+]\d\+\)\?\>"
-syn match       floatLit            "\<\d\+[Ee][-+]\d\+\>"
+syn match       floatLit            "\<\d\+[Ee]-\d\+\>"
 
 hi def link     floatLit            Float
+
+" Integers
+syn match       Integers            "\<0x\x\+\>"
+syn match       Integers            "\<0\o\+\>"
+syn match       Integers            "\<\d\+\([Ee]\d\+\)\?\>"
+syn match       Integers            "\<\d\+\([Ee]+\d\+\)\?\>"
+
+hi def link     Integers            Number
 
 let b:current_syntax = 'tengo'
