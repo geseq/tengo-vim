@@ -73,5 +73,9 @@ hi def link     Directive           Statement
 hi def link     RepeatWords         Repeat
 hi def link     Declaration         Keyword
 
+" Function call
+syntax match    FuncCall            /\<\K\k*\ze(/
+hi def link     FuncCall            Keyword
 
 let b:current_syntax = 'tengo'
+
