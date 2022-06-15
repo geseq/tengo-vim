@@ -27,5 +27,13 @@ hi def link     interpString        string
 syn region      rawString           start=+'+ skip=+\\\\\|\\'+ end=+'+
 hi def link     rawString           character
 
+" Built-in functions
+syn keyword     builtinFuncs        format len copy append delete splice type_name
+syn keyword     builtinFuncs        string int bool float char bytes time error range
+syn keyword     builtinFuncs        is_string is_int is_bool is_float is_char is_bytes is_error
+syn keyword     builtinFuncs        is_undefined is_function is_callable is_array is_immutable_array
+syn keyword     builtinFuncs        is_map is_immutable_map is_iterable is_time
+
+hi def link     builtinFuncs        Keyword
 
 let b:current_syntax = 'tengo'
