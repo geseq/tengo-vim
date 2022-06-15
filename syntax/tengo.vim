@@ -36,4 +36,15 @@ syn keyword     builtinFuncs        is_map is_immutable_map is_iterable is_time
 
 hi def link     builtinFuncs        Keyword
 
+" Functions
+syn match       funcDecl            /\<func\>/
+hi def link     funcDecl            Type
+
+" Floating point
+syn match       floatLit            "\<\d\+\.\d*\([Ee][-+]\d\+\)\?\>"
+syn match       floatLit            "\<\.\d\+\([Ee][-+]\d\+\)\?\>"
+syn match       floatLit            "\<\d\+[Ee][-+]\d\+\>"
+
+hi def link     floatLit            Float
+
 let b:current_syntax = 'tengo'
