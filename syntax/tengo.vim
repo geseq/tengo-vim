@@ -21,6 +21,7 @@ hi def link     CommentBlock        Comment
 
 " Interpreted strings
 syn region      InterpString        start=+"+ skip=+\\\\\|\\"+ end=+"+
+syn region      InterpString        start=+`+ skip=+\\\\\|\\"+ end=+`+
 hi def link     InterpString        string
 
 " Raw strings
