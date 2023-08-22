@@ -13,6 +13,10 @@ syn case match
 syn region      FoldingBrace        start="{" end="}" transparent fold
 syn region      FoldingParen        start='(' end=')' transparent fold
 
+" Interpreter directive
+syn match       HashBang            "\%1l^#!.*"
+hi def link     HashBang            PreProc
+
 " Comments
 syn region      CommentBlock        start="/\*" end="\*/"
 syn region      CommentBlock        start="//" end="$"
